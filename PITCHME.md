@@ -4,8 +4,6 @@
 ---
 
 
-
-
 ## Preface
 
 - TypeScript
@@ -16,10 +14,12 @@
 ## TypeScript
  
 @ul
+
   - Type Inference
   - Helps refactor
   - Maintain consistency
   - Use Types all the time (avoid ```any```)
+  
 @ulend
 
 ---
