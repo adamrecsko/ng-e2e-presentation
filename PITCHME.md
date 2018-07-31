@@ -19,13 +19,14 @@
   - Use Types all the time (avoid ```any```)
 @ulend
 
-
+---
 ## Synchronous vs Asynchronous execution in JavaScript
 
+---
 Synchronous example:
 
 
-``` 
+```TypeScript 
   function add(a:number):number{
      const b = 1;
      return a + b;
@@ -35,10 +36,10 @@ Synchronous example:
   console.log(result); // 2
   
 ```
-
+---
 Asynchronous example:
 
-``` 
+```TypeScript
   function async add(a:number):Promise<number>{
       const b = await backendCall(); // 1
       return await a + b;
