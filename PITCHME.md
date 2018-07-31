@@ -1,5 +1,17 @@
-## Hello, World!
+
+# Testing Angular6
 
 ---
 
-## The End :)
+## E2E with Protractor
+
+@ul
+
+- E2E runner
+- Works with selenium and browserstack
+
+@ulend
+
+---
+
+## End
