@@ -1,4 +1,3 @@
-
 # Testing Angular6
 
 ---
@@ -16,7 +15,7 @@
 @ul
 
   - Type Inference
-  - Helps refactor
+  - Helps refactoring
   - Maintain consistency
   - Use Types all the time (avoid ```any```)
   
@@ -28,8 +27,8 @@
 ---
 Synchronous example:
 
+```JavaScript 
 
-```TypeScript 
   function add(a:number):number{
      const b = 1;
      return a + b;
@@ -42,7 +41,7 @@ Synchronous example:
 ---
 Asynchronous example:
 
-```TypeScript
+```JavaScript
   function async add(a:number):Promise<number>{
       const b = await backendCall(); // 1
       return await a + b;
@@ -55,21 +54,18 @@ Asynchronous example:
   // ... 
   const result = await add(1);
   console.log(result); // 2
-  
-  
 ```
 
 ---
-
-
 
 ## E2E
 
 - Protractor
 - Structure
+- PageObject (The Interface of the Page)
 - Directives (describe/it/before/after..)
 - No Side effect
-- PageObject (The Interface of the Page)
+
 
 ---
 
@@ -79,7 +75,27 @@ Asynchronous example:
 - Works with selenium and **browserstack**
 - Shipped with angular6
 
+---
 
+## Structure
+Directory structure:
+  ```
+     e2e/
+        ./common  -- common logic goes there, e.g.: customer creation, smtp connection. etc...
+        ./page1   -- multiple user steps like: user invite, registration related to that page
+        ./page2
+        ./flow1   -- multiple user steps related to that user flow.
+                  -- the subfolders representing the scope of the e2e test
+        ....
+       
+  ```
+  
+---  
+File structure
+   flow1/flow1.e2e-spec.ts  -- the prefix is used by the test runner to find the scenarios
+   flow1/page
+  
+  
 ---
 
 ## End
