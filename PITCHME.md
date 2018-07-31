@@ -3,6 +3,9 @@
 
 ---
 
+
+
+
 ## Preface
 
 - TypeScript
@@ -72,15 +75,9 @@ Asynchronous example:
 
 ## Protractor
 
-@ul
-
 - E2E runner (top of the test pyramid)
 - Works with selenium and **browserstack**
 - Shipped with angular6
-
-@ulend
-
-
 
 
 ---
