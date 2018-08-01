@@ -2,7 +2,6 @@
 
 ---
 
-
 ## Preface
 
 - TypeScript
@@ -14,11 +13,11 @@
  
 @ul
 
-  - Type Inference
+  - Use Types all the time (avoid ```any```)
+  - What is Type Inference
   - Helps refactoring
   - Maintain consistency
-  - Use Types all the time (avoid ```any```)
-  
+
 @ulend
 
 ---
@@ -61,6 +60,7 @@ Asynchronous example:
 ## E2E
 
 - Protractor
+- Jasmine
 - Structure
 - PageObject (The Interface of the Page)
 - Directives (describe/it/before/after..)
@@ -75,6 +75,11 @@ Asynchronous example:
 - Works with selenium and **browserstack**
 - Shipped with angular6
 
+
+## Jasmine
+
+---gist=adamrecsko/36bf9e6502691c24c3f106d5d36190f2?lang=JavaStrip
+
 ---
 
 ## Structure
@@ -87,7 +92,7 @@ Directory structure:
         ./flow1   -- multiple user steps related to that user flow.
                   -- the subfolders representing the scope of the e2e test
         ....
-       
+      
   ```
   
 ---  
