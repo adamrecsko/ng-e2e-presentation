@@ -78,7 +78,7 @@ Asynchronous example:
 
 ## Jasmine
 
----gist=adamrecsko/36bf9e6502691c24c3f106d5d36190f2?lang=JavaStrip
+---?gist=adamrecsko/36bf9e6502691c24c3f106d5d36190f2?lang=JavaStrip
 
 ---
 
