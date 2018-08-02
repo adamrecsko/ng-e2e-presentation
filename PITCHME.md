@@ -2,7 +2,7 @@
 
 ---
 
-## Synchronous vs Asynchronous execution in JavaScript
+## ***Synchronous*** vs ***Asynchronous*** execution in JavaScript
 
 ---
 Synchronous example:
