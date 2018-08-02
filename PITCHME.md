@@ -36,6 +36,9 @@ Asynchronous example:
   console.log(result); // 2
 ```
 
+
+---
+
 ## Async Test
 
 ```JavaScript
@@ -72,5 +75,7 @@ Asynchronous example:
  - Decouple the test logic from implementation details
  - Avoid using expect() in page objects
 @ulend
+
+---
 
 ## End
