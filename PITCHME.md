@@ -2,25 +2,6 @@
 
 ---
 
-## Preface
-
-- TypeScript
-- Asynchronous vs Synchronous execution in JavaScript
-
----
-
-## TypeScript
- 
-@ul
-
-  - Use Types all the time (avoid ```any```)
-  - What is Type Inference
-  - Helps refactoring
-  - Maintain consistency
-
-@ulend
-
----
 ## Synchronous vs Asynchronous execution in JavaScript
 
 ---
@@ -55,52 +36,41 @@ Asynchronous example:
   console.log(result); // 2
 ```
 
+## Async Test
+
+```JavaScript
+
+  it('should login', async () => {
+    await login.loginUser(USERS.customerAdmin);
+    await app.waitForHomeLoaded();
+  });
+
+```
+
+
 ---
 
 ## E2E
 
-- Protractor
-- Jasmine
-- Structure
-- PageObject (The Interface of the Page)
-- Directives (describe/it/before/after..)
-- No Side effect
-
-
----
-
-## Protractor
-
-- E2E runner (top of the test pyramid)
-- Works with selenium and **browserstack**
-- Shipped with angular6
-
-
-## Jasmine
-
----?gist=adamrecsko/36bf9e6502691c24c3f106d5d36190f2?lang=JavaScript
+@ul
+    - Don't e2e test what’s been unit tested
+    - Make your tests independent at least at the file level
+    - Do not add logic to your test
+    - Don't mock unless you need to
+    - Use Jasmine2
+    - Make your tests independent from each other
+    - Navigate to the page under test before each test
+@ulend
 
 ---
 
-## Structure
-Directory structure:
-  ```
-     e2e/
-        ./common  -- common logic goes there, e.g.: customer creation, smtp connection. etc...
-        ./page1   -- multiple user steps like: user invite, registration related to that page
-        ./page2
-        ./flow1   -- multiple user steps related to that user flow.
-                  -- the subfolders representing the scope of the e2e test
-        ....
-      
-  ```
-  
----  
-File structure
-   flow1/flow1.e2e-spec.ts  -- the prefix is used by the test runner to find the scenarios
-   flow1/page
-  
-  
----
+## Page Object
+
+@ul
+ - Encapsulate information about the elements on the page under test
+ - They can be reused across multiple tests
+ - Decouple the test logic from implementation details
+ - Avoid using expect() in page objects
+@ulend
 
 ## End
