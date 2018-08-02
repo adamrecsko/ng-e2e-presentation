@@ -1,4 +1,4 @@
-# Testing Angular6
+# Testing with Protractor
 
 ---
 
@@ -69,6 +69,27 @@ Asynchronous example:
 
 ## Page Object
 
+```JavaScript
+
+export class Login {
+
+  navigateTo() {
+    return browser.get(loginPage);
+  }
+
+  getEmailField() {
+    return PageLocators.getObjByFormCtrlName('email');
+  }
+  ...
+}
+
+```
+
+---
+
+## Page Object
+
+
 @ul
  - Encapsulate information about the elements on the page under test
  - They can be reused across multiple tests
@@ -78,4 +99,4 @@ Asynchronous example:
 
 ---
 
-## End
+## Workshop
