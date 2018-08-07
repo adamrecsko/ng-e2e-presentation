@@ -115,7 +115,7 @@ Asynchronous example with async (ES7):
 @ulend
 
 ---
-## Do not add logic to your test, use Jasmine
+## Do not add logic to your test
 https://jasmine.github.io/api/3.0/matchers.html
 
 ### Wrong test
@@ -126,12 +126,15 @@ https://jasmine.github.io/api/3.0/matchers.html
           throw Error('Test is failing');
       }
       for (let i=0; i<items.length, i++) {
-          if (items[i]<10){
+          if (items[i]===10){
               throw Error('Test is failing');
           }
       }
   });
 ```
+
+@[2-4](Test if the items length not equal 4)
+@[5-9](Test if every item in the items array is 10)
 
 ---
 ### Good test
