@@ -20,7 +20,6 @@ Synchronous example:
   // ... 
   const result = add(1);
   console.log(result); // 2
-  
 ```
 
 @[6]
@@ -30,7 +29,6 @@ Synchronous example:
 
 ---
 Asynchronous example with Promise:
-
 ```TypeScript
   function  add(a:number):Promise<number>{
       return backendCall().then((b)=>{
@@ -49,9 +47,11 @@ Asynchronous example with Promise:
  
 ```
 
-@[2-4](then block)
-@[12-15](then block)
-
+@[8]
+@[9]
+@[12]
+@[3]
+@[13]
 ---
 ## What is a Promise?
 ```TypeScript
