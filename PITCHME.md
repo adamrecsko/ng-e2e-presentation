@@ -120,34 +120,7 @@ https://jasmine.github.io/api/3.0/matchers.html
 
 ##  Test suite
 
-```JavaScript
-
-describe('Test Suite name', () => {
-  // page objects and services  
-  let login: Login;
-
-  beforeEach(async (done: () => void) => {
-    login = new Login();
-    done();
-  });
-  
-  afterEach(async (done: () => void) => {
-      
-  });
-  
-  it('should ....', async () => {
-   
-  });
-
-  it('should ...', async () => {
-    expect(...);
-  });
-
-});
-
-
-```
-
+---?gist=adamrecsko/c8c25301e1ea0c273ae25b7011cdc723?lang=JavaScript
 
 ---
 
