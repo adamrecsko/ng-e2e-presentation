@@ -55,20 +55,21 @@ Asynchronous example with Promise:
    let i = 1;
    const prom = new Promise((resolve, reject)=>{
       i=i+1; // this is ugly, side effect!! avoid it all cost!!
+      resolve();
    });
    console.log(i); // ????
 ```
 
 @[1-4](Promise interface)
-@[6-10](What i s printed on the console?)
+@[6-11](What is on the console?)
 ---
 
-Asynchronous example with async:
+Asynchronous example with async (ES7):
 
 ```TypeScript
   function async add(a:number):Promise<number>{
       const b = await backendCall(); // 1
-      return await a + b;
+      return a + b;
   }
   
   // ... 
@@ -80,7 +81,10 @@ Asynchronous example with async:
   console.log(result); // 2
 ```
 
-
+@[1](async function)
+@[2](await for something, it is like the then block)
+@[7-8](still returns a promise)
+@[11-12](but you can await)
 ---
 
 ## Async Test
