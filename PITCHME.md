@@ -119,7 +119,6 @@ https://jasmine.github.io/api/3.0/matchers.html
 
 
 ## Test suite
-
 ```TypeScript
 import {Login} from './login.po';
 import {App} from '../common/common.po';
@@ -134,16 +133,11 @@ describe('Login page', () => {
       await login.navigateTo();
       done();
   });
-  it('should login', async () => {
-      await login.loginUser(USERS.customerAdmin);
-      await app.waitForHomeLoaded();
-  });
   it('should not login if fake email given', async () => {
       await login.loginUser({email: 'fakeemail@fff.ff', password: '123456'});
       expect(await login.getAlertMessage()).toContain('Incorrect email or password.');
   });
 });
-
 ```
 
 @[1-3]
