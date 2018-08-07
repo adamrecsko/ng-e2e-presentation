@@ -128,24 +128,22 @@ import {USERS} from '../config';
 describe('Login page', () => {
   let login: Login;
   let app: App;
-
   beforeEach(async (done) => {
       login = new Login();
       app = new App();
       await login.navigateTo();
       done();
   });
-
   it('should login', async () => {
     await login.loginUser(USERS.customerAdmin);
     await app.waitForHomeLoaded();
   });
-
   it('should not login if fake email given', async () => {
     await login.loginUser({email: 'fakeemail@fff.ff', password: '123456'});
     expect(await login.getAlertMessage()).toContain('Incorrect email or password.');
   });
 });
+
 ```
 
 @[1-3]
