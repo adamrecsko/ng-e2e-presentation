@@ -126,7 +126,7 @@ https://jasmine.github.io/api/3.0/matchers.html
           throw Error('Test is failing');
       }
       for (let i=0; i<items.length, i++) {
-          if (items[i]===10){
+          if (items[i]!==10){
               throw Error('Test is failing');
           }
       }
