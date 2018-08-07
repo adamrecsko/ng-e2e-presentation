@@ -2,7 +2,11 @@
 
 ---
 
-## **Synchronous** vs **Asynchronous** execution in JS
+## **Sync** vs **Async** 
+
+@ul
+    - Everything is async in protractor
+@ulend
 
 ---
 Synchronous example:
