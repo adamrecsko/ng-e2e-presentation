@@ -6,6 +6,7 @@
 
 @ul
     - Everything is async in protractor
+    - What is sync and what is async?
 @ulend
 
 ---
