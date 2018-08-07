@@ -127,15 +127,8 @@ describe('Login page', () => {
     let login: Login;
     let app: App;
     beforeEach(async (done) => {
-        await login.navigateTo();
-        done();
     });
     it('should not login if fake email given', async () => {
-        await login.loginUser({
-            email: 'fakeemail@fff.ff',
-            password: '123456'
-        });
-        expect(await login.getAlertMessage()).toContain('Incorrect email or password.');
     });
 });
 ```
