@@ -7,7 +7,7 @@
 ---
 Synchronous example:
 
-```JavaScript 
+```TypeScript 
 
   function add(a:number):number{
      const b = 1;
@@ -23,7 +23,7 @@ Synchronous example:
 ---
 Asynchronous example with Promise:
 
-```JavaScript
+```TypeScript
   function  add(a:number):Promise<number>{
       return backendCall().then((b)=>{
           return a + b;
@@ -44,7 +44,7 @@ Asynchronous example with Promise:
 ---
 Asynchronous example with async:
 
-```JavaScript
+```TypeScript
   function async add(a:number):Promise<number>{
       const b = await backendCall(); // 1
       return await a + b;
@@ -64,7 +64,7 @@ Asynchronous example with async:
 
 ## Async Test
 
-```JavaScript
+```TypeScript
 
   it('should login', async () => {
     await login.loginUser(USERS.customerAdmin);
@@ -94,7 +94,7 @@ https://jasmine.github.io/api/3.0/matchers.html
 
 ### Wrong test
 
-```JavaScript
+```TypeScript
   it('I am bad', ()=>{
       if (items.length!==4){
           throw Error('Test is failing');
@@ -109,7 +109,7 @@ https://jasmine.github.io/api/3.0/matchers.html
 
 ---
 ### Good test
-```JavaScript
+```TypeScript
   it('I am good', ()=>{
       expect(items).toEqual([10,10,10,10]);
   });
@@ -128,7 +128,6 @@ import {USERS} from '../config';
 describe('Login page', () => {
   let login: Login;
   let app: App;
-
 
   beforeEach(async (done) => {
       login = new Login();
@@ -160,7 +159,7 @@ describe('Login page', () => {
 
 ## Page Object Structure
 
-```JavaScript
+```TypeScript
 
 export class Login {
 
