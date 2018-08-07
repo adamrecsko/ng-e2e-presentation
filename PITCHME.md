@@ -127,7 +127,6 @@ describe('Login page', () => {
     let login: Login;
     let app: App;
     beforeEach(async (done) => {
-        await login.navigateTo();
     });
     it('should not login if fake email given', async () => {
     });
@@ -145,7 +144,6 @@ describe('Login page', () => {
 ## Page Object Structure
 
 ```TypeScript
-
 export class Login {
 
   navigateTo() {
@@ -155,8 +153,12 @@ export class Login {
   getEmailField() {
     return PageLocators.getObjByFormCtrlName('email');
   }
-  ...
+
 }
+
+@[1](It is a simple class nothing fancy)
+@[3-5](Navigate to his page, use the browser module)
+@[7-9](Methods to manipulate or query the DOM strucutre)
 
 ```
 
