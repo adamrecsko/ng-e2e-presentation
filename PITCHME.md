@@ -156,6 +156,17 @@ export class Login {
 
 }
 
+export class App {
+
+  isHomeLoaded() {
+    return PageLocators.getObjByTagName('tm-home').isPresent();
+  }
+
+  async waitForHomeLoaded(waitSec = 3000) {
+    await browser.wait(() => this.isHomeLoaded(), waitSec, `Home screen should loaded within ${waitSec}s`);
+  }
+}
+
 ```
 
 @[1](It is a simple class nothing fancy)
