@@ -121,7 +121,6 @@ https://jasmine.github.io/api/3.0/matchers.html
 ##  Test suite
 
 ```JavaScript
-describe('Test Suite name', () => {
 import {Login} from './login.po';
 import {App} from '../common/common.po';
 import {USERS} from '../config';
@@ -151,7 +150,7 @@ describe('Login page', () => {
 ```
 
 @[1]
-@[1-3]
+@[1-4]
 @[5-10]
 @[12-15]
 @[17-20]
