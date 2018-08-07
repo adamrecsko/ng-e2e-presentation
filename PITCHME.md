@@ -122,28 +122,39 @@ https://jasmine.github.io/api/3.0/matchers.html
 
 ```JavaScript
 describe('Test Suite name', () => {
-  // page objects and services  
+import {Login} from './login.po';
+import {App} from '../common/common.po';
+import {USERS} from '../config';
+
+describe('Login page', () => {
   let login: Login;
-  beforeEach(async () => {
-      
+  let app: App;
+
+
+  beforeEach(async (done: () => void) => {
+    login = new Login();
+    app = new App();
+    await login.navigateTo();
+    done();
   });
-  afterEach(async () => {
-      
+
+  it('should login', async () => {
+    await login.loginUser(USERS.customerAdmin);
+    await app.waitForHomeLoaded();
   });
-  it('should ....', async () => {
-      
-  });
-  it('should ...', async () => {
-    expect(...);
+
+  it('should not login if fake email given', async () => {
+    await login.loginUser({email: 'fakeemail@fff.ff', password: '123456'});
+    expect(await login.getAlertMessage()).toContain('Incorrect email or password.');
   });
 });
 ```
 
 @[1]
-@[4-6]
-@[6-8]
-@[8-10]
-
+@[1-3]
+@[5-10]
+@[12-15]
+@[17-20]
 
 
 ---
