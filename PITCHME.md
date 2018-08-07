@@ -156,11 +156,11 @@ export class Login {
 
 }
 
+```
+
 @[1](It is a simple class nothing fancy)
 @[3-5](Navigate to his page, use the browser module)
 @[7-9](Methods to manipulate or query the DOM strucutre)
-
-```
 
 ---
 
