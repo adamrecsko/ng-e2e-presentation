@@ -41,7 +41,27 @@ Asynchronous example with Promise:
  
 ```
 
+[3](then block)
+
 ---
+## What is a Promise?
+```TypeScript
+   interface Promise {
+     then(onResolve, onReject):Promise;
+     catch(onReject):Promise;
+   }
+   
+   let i = 1;
+   const prom = new Promise((resolve, reject)=>{
+      i=i+1; // this is ugly, side effect!! avoid it all cost!!
+   });
+   console.log(i); // ????
+```
+
+[1-4](Promise interface)
+[6-10](What's printed on the console?)
+---
+
 Asynchronous example with async:
 
 ```TypeScript
