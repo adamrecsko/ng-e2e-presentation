@@ -140,10 +140,10 @@ describe('Login page', () => {
 });
 ```
 
-@[1-3]
-@[5]
-@[6-7]
-@[10-15]
+@[1-3](Imports)
+@[5](Test suite declaration)
+@[6-7](Page objects declarations)
+@[10-15](Test initialization, with navigate)
 @[17-20]
 @[22-25]
 
