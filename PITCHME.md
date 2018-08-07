@@ -13,7 +13,6 @@
 Synchronous example:
 
 ```TypeScript 
-
   function add(a:number):number{
      const b = 1;
      return a + b;
@@ -24,6 +23,10 @@ Synchronous example:
   
 ```
 
+@[6]
+@[2]
+@[3]
+@[7]
 
 ---
 Asynchronous example with Promise:
