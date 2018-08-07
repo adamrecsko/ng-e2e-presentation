@@ -92,7 +92,7 @@ Asynchronous example with async:
 ## Do not add logic to your test, use Jasmine
 https://jasmine.github.io/api/3.0/matchers.html
 
-Wrong test
+### Wrong test
 ```JavaScript
   it('I am bad', ()=>{
       if (items.length!==4){
@@ -105,10 +105,11 @@ Wrong test
       }
   });
 ``
-Good test
+---
+### Good test
 ```JavaScript
   it('I am good', ()=>{
-      expect(items).toEqual([10,10,10,10])
+      expect(items).toEqual([10,10,10,10]);
   });
 ```
 
