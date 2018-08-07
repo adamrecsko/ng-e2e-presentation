@@ -127,6 +127,7 @@ describe('Login page', () => {
     let login: Login;
     let app: App;
     beforeEach(async (done) => {
+        await login.navigateTo();
     });
     it('should not login if fake email given', async () => {
     });
