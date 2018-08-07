@@ -128,8 +128,6 @@ describe('Login page', () => {
   let login: Login;
   let app: App;
   beforeEach(async (done) => {
-      login = new Login();
-      app = new App();
       await login.navigateTo();
       done();
   });
