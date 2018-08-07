@@ -2,7 +2,7 @@
 
 ---
 
-## ***Synchronous*** vs ***Asynchronous*** execution in JavaScript
+## **Synchronous** vs **Asynchronous** execution in JS
 
 ---
 Synchronous example:
@@ -18,8 +18,31 @@ Synchronous example:
   console.log(result); // 2
   
 ```
+
+
 ---
-Asynchronous example:
+Asynchronous example with Promise:
+
+```JavaScript
+  function  add(a:number):Promise<number>{
+      return backendCall().then((b)=>{
+          return a + b;
+      }); 
+  }
+  
+  // ... 
+  const result = add(1);
+  console.log(result); // Promise... 
+  
+  // ... 
+  add(1).then((result)=>{
+       console.log(result); // 2
+  });
+ 
+```
+
+---
+Asynchronous example with async:
 
 ```JavaScript
   function async add(a:number):Promise<number>{
@@ -57,17 +80,75 @@ Asynchronous example:
 
 @ul
     - Don't e2e test what’s been unit tested
-    - Make your tests independent at least at the file level
+    - Make your tests **independent** at least at the file level
     - Do not add logic to your test
     - Don't mock unless you need to
-    - Use Jasmine2
+    - Use Jasmine3
     - Make your tests independent from each other
     - Navigate to the page under test before each test
 @ulend
 
 ---
+## Do not add logic to your test, use Jasmine
+https://jasmine.github.io/api/3.0/matchers.html
 
-## Page Object
+Wrong test
+```JavaScript
+  it('I am bad', ()=>{
+      if (items.length!==4){
+          throw Error('Test is failing');
+      }
+      for (let i=0; i<items.length, i++) {
+          if (items[i]<10){
+              throw Error('Test is failing');
+          }
+      }
+  });
+``
+Good test
+```JavaScript
+  it('I am good', ()=>{
+      expect(items).toEqual([10,10,10,10])
+  });
+```
+
+---
+
+
+##  Test suite
+
+```JavaScript
+
+describe('Test Suite name', () => {
+  // page objects and services  
+  let login: Login;
+
+  beforeEach(async (done: () => void) => {
+    login = new Login();
+    done();
+  });
+  
+  afterEach(async (done: () => void) => {
+      
+  });
+  
+  it('should ....', async () => {
+   
+  });
+
+  it('should ...', async () => {
+    expect(...);
+  });
+
+});
+
+
+```
+
+
+---
+
+## Page Object Structure
 
 ```JavaScript
 
@@ -87,7 +168,7 @@ export class Login {
 
 ---
 
-## Page Object
+## Page Object reasons
 
 
 @ul
@@ -100,3 +181,5 @@ export class Login {
 ---
 
 ## Workshop
+
+ - Branch: engage3/**e2e-workshop**
