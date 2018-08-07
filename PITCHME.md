@@ -118,7 +118,7 @@ https://jasmine.github.io/api/3.0/matchers.html
 ---
 
 
-##  Test suite
+## Test suite
 
 ```JavaScript
 import {Login} from './login.po';
@@ -131,10 +131,10 @@ describe('Login page', () => {
 
 
   beforeEach(async (done: () => void) => {
-    login = new Login();
-    app = new App();
-    await login.navigateTo();
-    done();
+      login = new Login();
+      app = new App();
+      await login.navigateTo();
+      done();
   });
 
   it('should login', async () => {
