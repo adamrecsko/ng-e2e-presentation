@@ -123,7 +123,7 @@ https://jasmine.github.io/api/3.0/matchers.html
 import {Login} from './login.po';
 import {App} from '../common/common.po';
 import {USERS} from '../config';
-describe('Login page', () => {
+describe('Login page', () => { 
     let login: Login;
     let app: App;
     beforeEach(async (done) => {
@@ -135,9 +135,9 @@ describe('Login page', () => {
 
 @[1-3](Imports)
 @[5](Test suite declaration)
-@[6-7](Page objects declarations)
-@[8-11](Test initialization, with navigate)
-@[12-15](it blocks with expectations)
+@[6-8](Page objects declarations)
+@[9-12](Test initialization, with navigate)
+@[13-16](it blocks with expectations)
 
 ---
 
