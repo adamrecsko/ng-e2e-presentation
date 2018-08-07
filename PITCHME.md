@@ -41,7 +41,7 @@ Asynchronous example with Promise:
   console.log(result); // Promise... 
   
   // ... 
-  add(1).then((result)=>{
+  result.then((result)=>{
        console.log(result); // 2
   });
  
