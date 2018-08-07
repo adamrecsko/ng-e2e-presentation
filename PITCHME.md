@@ -134,7 +134,7 @@ describe('Login page', () => {
 ```
 
 @[1-3](Imports)
-@[5](Test suite declaration)
+@[6](Test suite declaration)
 @[6-8](Page objects declarations)
 @[9-12](Test initialization, with navigate)
 @[13-16](it blocks with expectations)
