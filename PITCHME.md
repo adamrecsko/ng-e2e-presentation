@@ -83,6 +83,7 @@ Asynchronous example with async (ES7):
 
 @[1](async function)
 @[2](await for something, it is like the then block)
+@[3](work with the async result data)
 @[7-8](still returns a promise)
 @[11-12](but you can await)
 ---
