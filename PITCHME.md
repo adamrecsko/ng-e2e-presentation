@@ -120,7 +120,31 @@ https://jasmine.github.io/api/3.0/matchers.html
 
 ##  Test suite
 
----?gist=adamrecsko/c8c25301e1ea0c273ae25b7011cdc723?lang=JavaScript
+```JavaScript
+describe('Test Suite name', () => {
+  // page objects and services  
+  let login: Login;
+  beforeEach(async () => {
+      
+  });
+  afterEach(async () => {
+      
+  });
+  it('should ....', async () => {
+      
+  });
+  it('should ...', async () => {
+    expect(...);
+  });
+});
+```
+
+@[1]
+@[4-6]
+@[6-8]
+@[8-10]
+
+
 
 ---
 
