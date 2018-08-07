@@ -120,7 +120,7 @@ https://jasmine.github.io/api/3.0/matchers.html
 
 ## Test suite
 
-```JavaScript
+```TypeScript
 import {Login} from './login.po';
 import {App} from '../common/common.po';
 import {USERS} from '../config';
@@ -130,7 +130,7 @@ describe('Login page', () => {
   let app: App;
 
 
-  beforeEach(async (done: () => void) => {
+  beforeEach(async (done) => {
       login = new Login();
       app = new App();
       await login.navigateTo();
