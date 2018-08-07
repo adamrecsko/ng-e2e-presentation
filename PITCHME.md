@@ -173,6 +173,9 @@ export class App {
 @[3-5](Navigate to his page, use the browser module)
 @[7-9](Methods to manipulate or query the DOM strucutre)
 
+@[13](Common App Page object)
+@[20](Wait for something to load, async world)
+
 ---
 
 ## Page Object reasons
