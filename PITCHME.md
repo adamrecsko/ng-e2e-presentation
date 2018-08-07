@@ -93,6 +93,7 @@ Asynchronous example with async:
 https://jasmine.github.io/api/3.0/matchers.html
 
 ### Wrong test
+
 ```JavaScript
   it('I am bad', ()=>{
       if (items.length!==4){
@@ -104,7 +105,8 @@ https://jasmine.github.io/api/3.0/matchers.html
           }
       }
   });
-``
+```
+
 ---
 ### Good test
 ```JavaScript
