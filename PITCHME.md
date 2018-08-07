@@ -48,6 +48,7 @@ Asynchronous example with Promise:
 ```
 
 @[8]
+@[2]
 @[9]
 @[12]
 @[3]
