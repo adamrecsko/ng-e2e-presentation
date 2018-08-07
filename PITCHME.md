@@ -66,11 +66,14 @@ Asynchronous example with Promise:
       i=i+1; // this is ugly, side effect!! avoid it all cost!!
       resolve();
    });
+   prom.then((value)=>{
+      console.log(i); 
+   });
    console.log(i); // ????
 ```
 
 @[1-4](Promise interface)
-@[6-11](What is on the console?)
+@[6-14](What is on the console?)
 ---
 
 Asynchronous example with async (ES7):
