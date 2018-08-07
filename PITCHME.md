@@ -41,7 +41,8 @@ Asynchronous example with Promise:
  
 ```
 
-[3](then block)
+@[2-4](then block)
+@[12-15](then block)
 
 ---
 ## What is a Promise?
@@ -58,8 +59,8 @@ Asynchronous example with Promise:
    console.log(i); // ????
 ```
 
-[1-4](Promise interface)
-[6-10](What's printed on the console?)
+@[1-4](Promise interface)
+@[6-10](What i s printed on the console?)
 ---
 
 Asynchronous example with async:
