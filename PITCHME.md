@@ -121,7 +121,7 @@ https://jasmine.github.io/api/3.0/matchers.html
 ### Wrong test
 
 ```TypeScript
-  it('I am bad', ()=>{
+  it('should contain only 4 10 values', ()=>{
       if (items.length!==4){
           throw Error('Test is failing');
       }
@@ -139,11 +139,11 @@ https://jasmine.github.io/api/3.0/matchers.html
 ---
 ### Good test
 ```TypeScript
-  it('I am good', ()=>{
+  it('should contain only 4 10 values', ()=>{
       expect(items).toEqual([10,10,10,10]);
   });
 ```
-
+@[2](Use Jasmine)
 ---
 
 
