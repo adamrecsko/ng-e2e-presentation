@@ -49,14 +49,25 @@ export class EngageLocalStorageService {
 }
 ```
 
+@[7]: Test getItem
 @[4]: Dependency
 
 ---
 # Service Tests
+
 ```TypeScript
  describe('EngageLocalStorageService', ()=>{
      describe('getItem', ()=>{
-
+         let service: EngageLocalStorageService;
+         let storageMock: any;
+         beforeEach( () => {
+             storageMock = jasmine.createSpyObj('storageService', ['get']);
+             service = new EngageLocalStorageService(storageMock);
+         });
+         it('should call the storageServices get method', ()=>{
+             const res = service.getItem('something');
+             expect(storageMock.get).toHaveBeenCalledWith('something');
+         });
      });
  });
 ```
