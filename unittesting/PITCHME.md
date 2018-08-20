@@ -3,8 +3,9 @@
 ---
 
 
+
 @ul
-  - Service Tests
+  - Service Tests (UnitTest)
   - Component Tests:
     - Component Class Tests
     - Component DOM Tests
@@ -14,25 +15,46 @@
 
 ---
 
+# UnitTest
+
+   - Make your tests **independent**
+   - Do not add **logic** to your test
+   - **Mock** dependencies
+   - Use **Spies** and Stubs
+   - Use Jasmine3
+   - Don't test **private** methods
+
+
+---
 
 # Service Tests
 
 ```TypeScript
 @Injectable()
 export class EngageLocalStorageService {
-  constructor(private localStorageService) {}
-  getItem(key): any {
+  constructor(private localStorageService) {
+
+  }
+  public getItem(key): any {
     return this.localStorageService.get(key);
   }
-  setItem(key, value) {
+  public setItem(key, value) {
     this.localStorageService.set(key, value);
   }
-  removeItem(key) {
+  public removeItem(key) {
     this.localStorageService.remove(key);
   }
+
 }
 ```
 
 @[3]: Dependency
-
 ---
+# Service Tests
+```TypeScript
+ describe('EngageLocalStorageService', ()=>{
+     describe('getItem', ()=>{
+
+     });
+ });
+```
