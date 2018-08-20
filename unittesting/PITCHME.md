@@ -71,3 +71,8 @@ export class EngageLocalStorageService {
      });
  });
 ```
+@[1]: Service Tests
+@[2]: Method Tests
+@[6-7]:Init
+@[9-12]: Tests
+---
