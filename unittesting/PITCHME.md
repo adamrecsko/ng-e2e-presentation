@@ -92,8 +92,16 @@ export class EngageLocalStorageService {
 
 ```TypeScript
 beforeEach(() => {
-  const storageMock = jasmine.createSpyObj('storageService', ['get']);
-  TestBed.configureTestingModule({ providers: [EngageLocalStorageService,   { provide: LocalStorageService, useValue: storageMock }] });
+  const storageMock = jasmine.
+     createSpyObj('storageService', ['get']);
+  TestBed.
+  configureTestingModule(
+      { providers: 
+         [EngageLocalStorageService,
+          { provide: LocalStorageService, useValue: storageMock }
+         ]
+      }
+  );
 });
 
 it('should call the storageServices get method', ()=>{
@@ -102,7 +110,7 @@ it('should call the storageServices get method', ()=>{
 });
 
 ```
-@[1-4]: Init 
-@[6-9]: Method Tests
+@[4-10]: Init 
+@[14-15]: Method Tests
 
 ---
