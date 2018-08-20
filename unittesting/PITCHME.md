@@ -29,11 +29,13 @@
 
 # Service Tests
 
+---
+
 ```TypeScript
 
 @Injectable()
 export class EngageLocalStorageService {
-  constructor(private localStorageService) {
+  constructor(private localStorageService:LocalStorageService) {
 
   }
   public getItem(key): any {
@@ -53,7 +55,6 @@ export class EngageLocalStorageService {
 @[4]: Dependency
 
 ---
-# Service Tests
 
 ```TypeScript
  describe('EngageLocalStorageService', ()=>{
@@ -80,5 +81,27 @@ export class EngageLocalStorageService {
 # Service Test
 (with TestBed)
 
+@ul
+  - What is TestBed?
+  - TestBed creates a dynamically-constructed Angular test module
+  - Emulates an Angular @NgModule.
+@ulend
+
+
+---
+
+```TypeScript
+
+beforeEach(() => {
+  const storageMock = jasmine.createSpyObj('storageService', ['get']);
+  TestBed.configureTestingModule({ providers: [EngageLocalStorageService,   { provide: LocalStorageService, useValue: storageMock }] });
+});
+
+it('should call the storageServices get method', ()=>{
+            const service = TestBed.get(EngageLocalStorageService);
+             expect(storageMock.get).toHaveBeenCalledWith('something');
+});
+
+```
 
 ---
