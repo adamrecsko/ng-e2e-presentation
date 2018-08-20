@@ -20,13 +20,12 @@
 ```TypeScript
 @Injectable()
 export class EngageLocalStorageService {
-  constructor(private localStorageService) {
-  }
+  constructor(private localStorageService) {}
   getItem(key): any {
-      return this.localStorageService.get(key);
+    return this.localStorageService.get(key);
   }
   setItem(key, value) {
-      this.localStorageService.set(key, value);
+    this.localStorageService.set(key, value);
   }
   removeItem(key) {
     this.localStorageService.remove(key);
