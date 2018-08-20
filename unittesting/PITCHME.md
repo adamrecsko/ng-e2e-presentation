@@ -20,7 +20,7 @@
 ```TypeScript
 @Injectable()
 export class EngageLocalStorageService {
-  constructor(private localStorageService: LocalStorageService) {
+  constructor(private localStorageService) {
   }
   getItem(key): any {
     return this.localStorageService.get(key);
@@ -31,11 +31,7 @@ export class EngageLocalStorageService {
   removeItem(key) {
     this.localStorageService.remove(key);
   }
-  clear() {
-    this.localStorageService.clearAll();
-  }
 }
-
 ```
 
 @[3]: Dependency
