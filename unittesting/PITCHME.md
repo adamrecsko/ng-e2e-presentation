@@ -15,7 +15,7 @@
 ---
 
 
-# Service Tests (Simple Class UnitTest)
+# Service Tests
 
 ```TypeScript
 @Injectable()
