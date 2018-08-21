@@ -23,6 +23,29 @@
    - Use Jasmine3
    - Don't test **private** methods
 
+---
+# Spies and Mocks
+
+@ul
+ - Creating the instance
+ - Defining the behaviour
+ - Asserting the calls
+@ulend
+
+```TypeScript
+const tape = jasmine.createSpyObj('tape', ['play', 'pause', 'stop', 'rewind']);
+
+tape.play();
+tape.pause();
+tape.rewind(0);
+
+ expect(tape.play).toHaveBeenCalled();
+ expect(tape.pause).toHaveBeenCalled();
+ expect(tape.rewind).toHaveBeenCalled();
+ expect(tape.stop).not.toHaveBeenCalled();
+
+```
+  
 
 ---
 
