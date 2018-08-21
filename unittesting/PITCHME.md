@@ -3,7 +3,6 @@
 ---
 
 
-
 @ul
   - Service Tests (UnitTest)
   - Component Tests:
@@ -87,6 +86,21 @@ export class EngageLocalStorageService {
   - Emulates an Angular @NgModule.
 @ulend
 
+---
+
+```TypeScript
+@NgModule({
+  providers: [
+    LocalStorageService,
+    EngageLocalStorageService,
+
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+}
+
+```
 
 ---
 
@@ -111,6 +125,6 @@ it('should call the storageServices get method', ()=>{
 
 ```
 @[4-10]: Init 
-@[14-15]: Method Tests
+@[15-16]: Method Tests
 
 ---
