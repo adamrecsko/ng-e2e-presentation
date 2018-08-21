@@ -33,16 +33,13 @@
 @ulend
 
 ```TypeScript
-const tape = jasmine.createSpyObj('tape', ['play', 'pause', 'stop', 'rewind']);
+const tape = jasmine.createSpyObj('tape', ['play', 'pause']);
 
 tape.play();
 tape.pause();
-tape.rewind(0);
 
- expect(tape.play).toHaveBeenCalled();
- expect(tape.pause).toHaveBeenCalled();
- expect(tape.rewind).toHaveBeenCalled();
- expect(tape.stop).not.toHaveBeenCalled();
+expect(tape.play).toHaveBeenCalled();
+expect(tape.pause).toHaveBeenCalled();
 
 ```
   
